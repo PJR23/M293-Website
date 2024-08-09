@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    background-color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    background-color: #fff;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+/*schatten*/
+.bst {
+    box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/*schatten*/
+.bsb {
+    box-shadow: 0px -2.5px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/*für das logo*/
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 17px;
+    font-weight: bold;
+    transition: all 1s ease 0s;
+}
+
+nav a:hover {
+    color: #888888;
+}
+
+
+/*kleine nach verbesserungen die auf bedarf wieder weggemacht werden können*/
+.fx {
+    visibility: hidden;
+    position: absolute; 
+    top: 40px;
+    left: 10px;
+}
+
+/*animiation wenn man auf des burger menu klickt*/
+nav .menu-toggle {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    user-select: none;
+}
+
+nav.open .menu-toggle {
+    transform: rotate(90deg);
+}
+
+
+/*altes design login*/
+#login-form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 7.5px;
+    width: 300px;
+    margin: 20px auto 20px;
+}
+
+#login-form h2 {
+    text-align: center;
+}
+
+#login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 7.5px;
+}
+
+#login-form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 7.5px;
+    resize: none;
+}
+
+#login-form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 7.5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#login-form button:hover {
+    background-color: #555;
+}
+
+
+/*folgende formatierungen sind für das impressum*/
+.modal {
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    padding-top: 5px;
+    width: 100%; 
+    height: 100%;
+    z-index: 10;
+    overflow: auto;
+    background-color: rgb(68,68,68); /* Fallback farbe */
+    background-color: rgba(68,68,68,0.4); /* Black opacity (durchsichtigkeit)*/
+}
+
+#impressum_title2 {
+    color: #444;
+}
+  
+#impressum_owner {
+    color: #444;
+}
+
+.modal-content {
+    border-radius: 7.5px;
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    color: #444;
+    width: 80%;
+    font-family: "Open Sans", sans-serif;
+}
+  
+ .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.impressum-button {
+    padding: 2px 2px;
+    min-width: 100px;
+    color: #444;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #fff; 
+    color: #fff; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+img { 
+    width: 100%;
+}
+
+
+/*text box für about-me*/
+.text-box {
+    position: absolute;
+    top: 110px;
+    right: 10px;
+    padding: 0px 10px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    max-width: 400px;
+    height: auto;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+    
+.text-p {
+    font-size: 18px;
+}
+
+.text-box p {
+    color: #000;
+}
+
+/*animation des slider und andere sachen dafür*/
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+
+div#slider { 
+    position: relative; 
+    overflow: hidden; 
+}
+
+div#slider figure img { 
+    width: 20%; 
+    float: left; 
+}
+
+div#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+
+
+/*textbox für index.html*/
+.slider-text {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0px 10px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    max-width: 400px;
+    height: auto;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+    
+.slider-p {
+    font-size: 18px;
+}
+
+.slider-text p {
+    color: #000;
+}
+
+
+/*dartellung des videos*/
+#video-about-me {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.tbox {
+    position: absolute;
+    margin: 20px auto 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 10px;
+    background: rgba(255, 255, 255, 0.75);
+    z-index: 2;
+    max-width: 350px;
+    height: auto;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.t1 {
+    font-size: 18px;
+}
+
+.img-school {
+    width: 100%;
+    height: auto;
+}
+
+
+/*anpassungen bei kleineren bildschirmen*/
+@media screen and (max-width: 768px) {
+    #video-about-me {
+        height: 500px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .slider-text {
+        max-width: 350px;
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    div#slider figure img, .img-school {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .slider-p, .text-p, .t1 {
+        font-size: 15px;
+    }
+
+    .tbox, .text-box, .slider-text {
+        font-size: 20px;
+    }
+
+    .text-box {
+        max-width: 350px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+    }
+
+    .fx {
+        visibility: visible;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    nav .menu-toggle {
+        display: block;
+        color: #000;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav.open ul {
+        display: flex;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+}
